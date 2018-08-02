@@ -1,0 +1,43 @@
+# Ignore paths that contain user-generated content.
+app/docroot/sites/*/files
+app/docroot/sites/*/private
+app/docroot/files/*
+
+# Settings
+app/docroot/sites/*/settings.local.php
+sites/*/services.local.yml
+
+# Packages
+*.7z
+*.dmg
+*.gz
+*.bz2
+*.iso
+*.jar
+*.rar
+*.tar
+*.zip
+*.tgz
+
+# Logs and databases
+*.log
+*.sql
+
+# OS generated files
+.DS_Store*
+ehthumbs.db
+Icon
+Thumbs.db
+._*
+
+# Editors
+*.un~
+.idea
+.vscode
+
+# SASS
+.sass-cache
+
+.docker/data/db/*
+!.docker/data/db/.gitkeep
+!data/backup/drupal.sql.gz

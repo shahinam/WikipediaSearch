@@ -1,0 +1,23 @@
+version: '3.1'
+
+services:
+  web:
+    image: drupal:8-apache
+    ports:
+      - 8080:80
+    volumes:
+      - ./data/config/site.conf:/etc/apache2/sites-enabled/000-default.conf
+      - ./app:/var/www/drupal
+    restart: always
+
+  db:
+    image: mysql:5.7
+    environment:
+      MYSQL_ROOT_PASSWORD: "root"
+      MYSQL_DATABASE: "drupal"
+      MYSQL_USER: "drupal"
+      MYSQL_PASSWORD: "drupal"
+    volumes:
+      - ./.docker/data/db:/var/lib/mysql
+      - ./data/backup:/docker-entrypoint-initdb.d
+    restart: always
