@@ -1,0 +1,7 @@
+name: Wikipedia Search
+type: module
+description: 'Wikipedia Search'
+core: 8.x
+package: 'Custom'
+dependencies:
+  - wikipedia_api

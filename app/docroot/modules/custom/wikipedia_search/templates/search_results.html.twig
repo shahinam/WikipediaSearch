@@ -1,0 +1,7 @@
+{% for item in data %}
+  <div class="item">
+    <h2><a href="{{ path('wikipedia_search.search', {'title': item['title']}) }}">{{ item['title'] }}</a></h2>
+    <p>{{ item['extract'] }}</p>
+    <p><a href="{{ item['link'] }}">{{ item['link'] }}</a></p>
+  </div>
+{% endfor %}
