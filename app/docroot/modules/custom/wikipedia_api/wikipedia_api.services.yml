@@ -1,0 +1,4 @@
+services:
+  wikipedia_api:
+    class: Drupal\wikipedia_api\WikipediaApi
+    arguments: ['@http_client', '@logger.factory']

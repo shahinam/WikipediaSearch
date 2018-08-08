@@ -1,0 +1,4 @@
+name: Wikipedia API
+type: module
+description: Wikipedia API Integration
+core: '8.x'
